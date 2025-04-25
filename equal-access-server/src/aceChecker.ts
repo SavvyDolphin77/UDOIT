@@ -114,7 +114,7 @@ export async function aceCheck(html: string, browser: puppeteer.Browser, guideli
     console.time('set-content');
     await page.setContent(html, { waitUntil: 'domcontentloaded' });
     console.timeEnd('set-content');
-    
+  
     let scriptAdded = hasScript;
     if (!hasScript) {
       console.time('add-script-tag');
